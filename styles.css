@@ -1,0 +1,60 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafb;
+  transition: background-color 0.3s;
+}
+
+/* Container styling */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Button animations */
+#changeButton {
+  transform: scale(1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#changeButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#changeButton:active {
+  transform: scale(0.98);
+}
+
+/* Greeting text animation */
+#greeting {
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+/* Add animation when greeting changes */
+.greeting-change {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* Additional utility classes */
+.text-shadow {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  body {
+    padding: 1rem;
+  }
+  
+  #greeting {
+    font-size: 1.5rem;
+  }
+}
